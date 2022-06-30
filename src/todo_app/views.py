@@ -35,3 +35,49 @@ def delete(id):
     db.session.commit()
     return redirect('/')
 
+
+@app.route('/update/<int:id>' , methods = ['GET','POST'])
+def update(id):
+    if request.method == 'POST':
+        title = request.form['title']
+        description = request.form['description']
+        data = Todo.query.filter_by(id = id).first()
+        data.title = title
+        data.description = description
+        db.session.add(data)
+        db.session.commit()
+        
+        return redirect('/')
+
+    data = Todo.query.filter_by(id = id).first()
+    return render_template('update.html',todo = data)
+
+
+def status_update(id):
+    if request.method == 'POST':
+        status = request.form['status']
+        data = Todo.query.filter_by(id = id).first()
+        data.status = status
+        db.session.add(data)
+        db.session.commit()
+        
+        return redirect('/')
+
+    data = Todo.query.filter_by(id = id).first()
+    return render_template('update.html',todo = data)
+
+
+def Something(id):
+    if request.method == 'POST':
+        title = request.form['title']
+        description = request.form['description']
+        data = Todo.query.filter_by(id = id).first()
+        data.title = title
+        data.description = description
+        db.session.add(data)
+        db.session.commit()
+        
+        return redirect('/')
+
+    data = Todo.query.filter_by(id = id).first()
+    return render_template('update.html',todo = data)

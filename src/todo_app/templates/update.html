@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block title %}Update{% endblock %}
+
+{% block content %}
+<h3 style =' text-align:center; margin:20px'> Update Your ToDo </h3>
+  <form action = '/update/{{todo.id}}' method = "POST" class="col-md-6" style="margin: 0 auto;">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name ='title' value = '{{todo.title}}'>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="title" name ='description'value = '{{todo.description}}'>
+      </div>
+      <div class="vertical-center" style="display: flex;justify-content: center;text-align: center;">
+        <button type="submit" class="btn btn-dark">Update</button>
+      </div>
+    
+  </form>
+
+{% endblock %}

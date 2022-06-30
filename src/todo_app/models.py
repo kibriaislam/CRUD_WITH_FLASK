@@ -6,6 +6,8 @@ from flask_sqlalchemy import SQLAlchemy
 import datetime
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SECRET_KEY'] = "asfjf888sffsfsdfsfnothinggksadkasdj"
+app.config[' SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
