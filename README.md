@@ -1,10 +1,10 @@
-# STRUCTURING FLASK PROJECT 
+# STRUCTURING A FLASK PROJECT 
 
 
 I build this project with flask, sqlalchamy and jinja2 template engine. 
 
 
-### I start this project for my self to understand how flask work and how to structure a flask project.  
+### I start this project for myself to understand how flask work and how to structure a flask project.  
 
 
 If you are from Django Framework then this project will help you to understand how to separate view and models in a different file.
